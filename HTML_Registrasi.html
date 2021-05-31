@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Halaman Login</title>
+        <link rel="stylesheet" href="registrasi.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Registrasi</h1>
+            <form id="selesai">
+                <label>Nama Lengkap</label><br>
+                <input type="text" id="nama"><br>
+                <label>Username</label><br>
+                <input type="text" id="username"><br>
+                <label>Password</label><br>
+                <input type="password" id="pass"><br>
+                <label>Email</label><br>
+                <input type="text" id="email"><br>
+                <label>Umur</label><br>
+                <input type="number" id="umur"><br>
+                <button type="button" onclick="registrasi()">Registrasi</button>
+            </form>
+        </div>
+        <script>
+            function registrasi(){
+                var nama_lengkap = document.getElementById('nama').value;
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('pass').value;
+                var email = document.getElementById('email').value;
+                var umur = document.getElementById('umur').value;
+                
+                if(nama_lengkap == '' || username == '' || password == '' || email == '' || umur == '')
+                {
+                alert('Registrasi gagal ');
+                document.location.href('regis.html');
+                }else{
+                    alert('Registrasi Berhasil');
+                }
+
+                var hasil = "<label>Nama Lengkap</label><br><h2 style='color:#fff'>"+ nama_lengkap +"</h2><br><label>Username</label><br><h2 style='color:#fff'>"+ username +"</h2><br><label>Password</label><br><h2 style='color:#fff'>"+ password +"</h2><br><label>Email</label><br><h2 style='color:#fff'>"+ email +"</h2><br><label>Umur</label><br><h2 style='color:#fff'>"</h2>";
+                var selesai = document.getElementById("selesai").innerHTML = hasil;
+                
+                
+            }
+        </script>
+        
+    </body>
+    </html>
