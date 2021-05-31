@@ -19,6 +19,8 @@
                 <input type="text" id="email"><br>
                 <label>Umur</label><br>
                 <input type="number" id="umur"><br>
+                <label>Agama</label><br>
+                <input type="text" id="agama"><br>
                 <label>Nomor Hp</label><br>
                 <input type="number" id="nohp"><br>
                 <button type="button" onclick="registrasi()">Registrasi</button>
@@ -31,9 +33,15 @@
                 var password = document.getElementById('pass').value;
                 var email = document.getElementById('email').value;
                 var umur = document.getElementById('umur').value;
+
+                var agama = document.getElementById('agama').value;
+                var alamat = document.getElementById('alamat').value;
+                var no_hp = document.getElementById('nohp').value;
+                                
                 var no_hp = document.getElementById('nohp').value;
                 
-                if(nama_lengkap == '' || username == '' || password == '' || email == '' || umur == '' || no_hp == '')
+                if(nama_lengkap == '' || username == '' || password == '' || email == '' || umur == '' || no_hp == '' || agama == '')
+
                 {
                 alert('Registrasi gagal ');
                 document.location.href('regis.html');
@@ -41,7 +49,9 @@
                     alert('Registrasi Berhasil');
                 }
 
-                var hasil = "<label>Nama Lengkap</label><br><h2 style='color:#fff'>"+ nama_lengkap +"</h2><br><label>Username</label><br><h2 style='color:#fff'>"+ username +"</h2><br><label>Password</label><br><h2 style='color:#fff'>"+ password +"</h2><br><label>Email</label><br><h2 style='color:#fff'>"+ email +"</h2><br><label>Umur</label><br><h2 style='color:#fff'>"+ umur +"</h2><br><h2 style='color:#fff'>"+ alamat +"</h2><br><label>Nomor Hp</label><br><h2 style='color:#fff'>"+ no_hp +"</h2>";
+
+                var hasil = "<label>Nama Lengkap</label><br><h2 style='color:#fff'>"+ nama_lengkap +"</h2><br><label>Username</label><br><h2 style='color:#fff'>"+ username +"</h2><br><label>Password</label><br><h2 style='color:#fff'>"+ password +"</h2><br><label>Email</label><br><h2 style='color:#fff'>"+ email +"</h2><br><label>Umur</label><br><h2 style='color:#fff'>"+ umur +"</h2><br><label>Agama</label><br><h2 style='color:#fff'>"+ agama +"</h2><br><label>Nomor Hp</label><br><h2 style='color:#fff'>"+ no_hp +"</h2>";
+
                 var selesai = document.getElementById("selesai").innerHTML = hasil;
                 
                 
